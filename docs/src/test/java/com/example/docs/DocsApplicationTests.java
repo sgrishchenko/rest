@@ -1,5 +1,6 @@
 package com.example.docs;
 
+import com.example.model.ModelApplication;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,7 +15,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = {ModelApplication.class, DocsApplication.class})
 public class DocsApplicationTests {
 	private MockMvc mockMvc;
 
